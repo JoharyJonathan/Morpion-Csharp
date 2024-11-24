@@ -13,6 +13,8 @@ namespace Morpion_Game
 
         bool tour = true;
         bool victory = false;
+        string X = "X";
+        string O = "O";
 
         private void AttachButtonClickEvents(Control parent)
         {
@@ -31,13 +33,33 @@ namespace Morpion_Game
 
             if (clickedButton != null)
             {
-                clickedButton.Text = tour ? "X" : "O";
+                // Disable the choice button
+                checksymbol.Enabled = false;
+
+                clickedButton.Text = tour ? X : O;
                 clickedButton.Enabled = false;
                 tour = !tour;
 
-                if (CheckVictory())
+                if (CheckPlayer())
                 {
-                    MessageBox.Show($"Player {(tour ? "2" : "1")} wins!");
+                    if (CheckVictory())
+                    {
+                        MessageBox.Show($"Player {(tour ? "1" : "2")} wins!");
+                        ResetGame();
+                    }
+                }
+                else
+                {
+                    if (CheckVictory())
+                    {
+                        MessageBox.Show($"Player {(tour ? "2" : "1")} wins!");
+                        ResetGame();
+                    }
+                }
+
+                if(CheckDraw())
+                {
+                    MessageBox.Show("Draw");
                     ResetGame();
                 }
             }
@@ -84,6 +106,17 @@ namespace Morpion_Game
             return false;
         }
 
+        private bool CheckDraw()
+        {
+            // Check if all buttons are already clicked with no victory
+            if (!CheckVictory() && !button1.Enabled && !button2.Enabled && !button3.Enabled && !button4.Enabled && !button5.Enabled && !button6.Enabled && !button7.Enabled && !button8.Enabled && !button9.Enabled)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private bool ResetGame()
         {
             button1.Text = "";
@@ -106,10 +139,36 @@ namespace Morpion_Game
             button8.Enabled = true;
             button9.Enabled = true;
 
+            checksymbol.Enabled = true;
+
             victory = false;
             tour = true;
 
             return victory;
+        }
+
+        private bool CheckPlayer()
+        {
+            if (checksymbol.Text == O)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        private void checksymbol_Click(object sender, EventArgs e)
+        {
+            if (tour)
+            {
+                checksymbol.Text = O;
+                tour = false;
+            }
+            else
+            {
+                checksymbol.Text = X;
+                tour = true;
+            }
         }
     }
 }
