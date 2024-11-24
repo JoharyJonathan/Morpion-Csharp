@@ -7,3 +7,6 @@ E:\C# projects\Morpion-Game\Morpion-Game\obj\Debug\Morpion_Game.Properties.Resou
 E:\C# projects\Morpion-Game\Morpion-Game\obj\Debug\Morpion-Game.csproj.GenerateResource.Cache
 E:\C# projects\Morpion-Game\Morpion-Game\obj\Debug\Morpion-Game.exe
 E:\C# projects\Morpion-Game\Morpion-Game\obj\Debug\Morpion-Game.pdb
+E:\C# projects\Morpion-Game\Morpion-Game\obj\Debug\Morpion_Game.Form2.resources
+E:\C# projects\Morpion-Game\Morpion-Game\obj\Debug\Morpion_Game.Form4.resources
+E:\C# projects\Morpion-Game\Morpion-Game\obj\Debug\Morpion_Game.Form3.resources

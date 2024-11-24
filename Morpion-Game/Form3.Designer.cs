@@ -1,6 +1,6 @@
 ﻿namespace Morpion_Game
 {
-    partial class Form1
+    partial class Form3
     {
         /// <summary>
         /// Required designer variable.
@@ -164,19 +164,18 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(18, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 20);
+            this.label2.Size = new System.Drawing.Size(98, 20);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Player 1 play : ";
+            this.label2.Text = "You play : ";
             // 
             // checksymbol
             // 
-            this.checksymbol.Location = new System.Drawing.Point(175, 78);
+            this.checksymbol.Location = new System.Drawing.Point(128, 78);
             this.checksymbol.Name = "checksymbol";
             this.checksymbol.Size = new System.Drawing.Size(58, 27);
             this.checksymbol.TabIndex = 3;
             this.checksymbol.Text = "X";
             this.checksymbol.UseVisualStyleBackColor = true;
-            this.checksymbol.Click += new System.EventHandler(this.checksymbol_Click);
             // 
             // menuStrip1
             // 
@@ -201,18 +200,16 @@
             // resetGameToolStripMenuItem
             // 
             this.resetGameToolStripMenuItem.Name = "resetGameToolStripMenuItem";
-            this.resetGameToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.resetGameToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.resetGameToolStripMenuItem.Text = "Reset Game";
-            this.resetGameToolStripMenuItem.Click += new System.EventHandler(this.resetGameToolStripMenuItem_Click);
             // 
             // goBackToolStripMenuItem
             // 
             this.goBackToolStripMenuItem.Name = "goBackToolStripMenuItem";
-            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.goBackToolStripMenuItem.Size = new System.Drawing.Size(163, 26);
             this.goBackToolStripMenuItem.Text = "Go Back";
-            this.goBackToolStripMenuItem.Click += new System.EventHandler(this.goBackToolStripMenuItem_Click);
             // 
-            // Form1
+            // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -224,7 +221,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "Form3";
             this.Text = "Morpion";
             this.panel1.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
@@ -255,4 +252,3 @@
         private System.Windows.Forms.ToolStripMenuItem goBackToolStripMenuItem;
     }
 }
-

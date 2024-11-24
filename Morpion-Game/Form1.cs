@@ -170,5 +170,17 @@ namespace Morpion_Game
                 tour = true;
             }
         }
+
+        private void goBackToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 menu = new Form2();
+            menu.Show();
+            this.Hide();
+        }
+
+        private void resetGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ResetGame();
+        }
     }
 }
